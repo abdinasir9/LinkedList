@@ -1,10 +1,11 @@
 public class LinkedList
 {
-    String value;
+    String value ;
     LinkedList next;
 
     public String getValue()
     {
+
         return value;
     }
     public LinkedList getNext()
@@ -21,5 +22,24 @@ public class LinkedList
     public void setNext(LinkedList next)
     {
         this.next = next;
+    }
+    public static LinkedList newLinkedList(String value){
+        LinkedList methodLinkedList = new LinkedList();
+        methodLinkedList.setValue(value);
+        return methodLinkedList;
+    }
+    public  LinkedList searchLinkedList(String value)
+    {   LinkedList current = this;
+        while (current != null)
+        {
+            if (current.value.equals(value))
+            {
+                return current;
+            }
+            current = current.next;
+        }
+        return null;
+
+
     }
 }
