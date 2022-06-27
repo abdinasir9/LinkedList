@@ -28,7 +28,7 @@ public class LinkedList
         methodLinkedList.setValue(value);
         return methodLinkedList;
     }
-    public  LinkedList searchLinkedList(String value)
+    public  LinkedList searchNode(String value)
     {   LinkedList current = this;
         while (current != null)
         {
@@ -42,4 +42,5 @@ public class LinkedList
 
 
     }
+
 }

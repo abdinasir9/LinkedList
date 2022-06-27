@@ -10,7 +10,7 @@ public class HelloWorld
     mySecondNewList.setNext(myThirdNewList);
     LinkedList myFourthNewList = LinkedList.newLinkedList("d");
     myThirdNewList.setNext(myFourthNewList);
-    LinkedList myResult =  myNewList.searchLinkedList("c");
+    LinkedList myResult =  myNewList.searchNode("c");
     System.out.println("test");
     }
 
