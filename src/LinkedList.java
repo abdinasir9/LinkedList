@@ -3,11 +3,18 @@ public class LinkedList
     String value ;
     LinkedList next;
 
+    LinkedList previous;
     public String getValue()
     {
 
         return value;
     }
+
+    public LinkedList getPrevious()
+    {
+        return previous;
+    }
+
     public LinkedList getNext()
     {
 
@@ -17,6 +24,11 @@ public class LinkedList
     public void setValue(String value)
     {
         this.value = value;
+    }
+
+    public void setPrevious(LinkedList previous)
+    {
+        this.previous = previous;
     }
 
     public void setNext(LinkedList next)
@@ -39,8 +51,26 @@ public class LinkedList
             current = current.next;
         }
         return null;
-
+    }
+    public void addNode(String value){
+        LinkedList current = this;
+        while(current.next != null){
+            current = current.next;
+        }
+       LinkedList newNode = newLinkedList(value);
+        newNode.setPrevious(current);
+        current.setNext(newNode);
 
     }
-
+//    public LinkedList deleteNode(String value){
+//        LinkedList current = this;
+//        LinkedList previous = null;
+//    while(current !=null){
+//        if (current.value.equals(value)){
+//            previous.next =
+//
+//        }
+//    }
+//
+//    }
 }
