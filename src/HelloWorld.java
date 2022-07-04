@@ -3,17 +3,19 @@ public class HelloWorld
 
     public static void main(String[] args)
     {
-    LinkedList myNewList = LinkedList.newLinkedList("A");
-    myNewList.addNode("B");
-        myNewList.addNode("C");
-        myNewList.addNode("D");
-//    LinkedList mySecondNewList = LinkedList.newLinkedList("B");
-//    myNewList.setNext(mySecondNewList);
-//    LinkedList myThirdNewList = LinkedList.newLinkedList("c");
-//    mySecondNewList.setNext(myThirdNewList);
-//    LinkedList myFourthNewList = LinkedList.newLinkedList("d");
-//    myThirdNewList.setNext(myFourthNewList);
-//    LinkedList myResult =  myNewList.searchNode("c");
+    LinkedList myNewList = LinkedList.createNode("A");
+    LinkedList mySecondNewList = LinkedList.createNode("B");
+    LinkedList myThirdNewList = LinkedList.createNode("C");
+    LinkedList myFourthNewList = LinkedList.createNode("D");
+    myNewList.setNext(mySecondNewList);
+    mySecondNewList.setPrevious(myNewList);
+    mySecondNewList.setNext(myThirdNewList);
+    myThirdNewList.setPrevious(mySecondNewList);
+    myThirdNewList.setNext(myFourthNewList);
+    myFourthNewList.setPrevious(myThirdNewList);
+    LinkedList myDeletion = myNewList.deleteNode("D");
+//    LinkedList myResult =  myNewList.searchNode("C");
+    System.out.println(myDeletion);
     System.out.println("test");
     }
 
